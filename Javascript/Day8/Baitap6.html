@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style2.css">
+	<script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#form').submit(function(){
+				var name = $('#name').val();
+				var email = $('#email').val();
+				var phone = $('#phone').val();
+				var notes = $('#notes').val();
+				var amount = $('#amount').val();
+				var result = "";
+				var error = "";
+
+				console.log(name)
+				function validateEmail(email) {
+					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+					return emailReg.test(email);
+				}
+
+
+				if(!name || !email || !phone || !notes || !amount){
+					error += "Cần nhập đủ các trường";
+				}
+				else if (!validateEmail(email)){
+					error += "Cần nhập đúng định dạng email";
+				}
+				else {
+					result += "Your email address: " + email + "<br>Name : " + name + "<br>Notes : " + notes + "<br>Telephone number : " + phone + "<br>No. of guests : " + amount + "<br>";
+				}
+
+				$('#result').html(result);
+				$('#error').html(error);
+
+				event.preventDefault();
+			});
+		});
+
+	</script>
+
+	<div id="container_all">
+		<div id="container_form">
+			<div id="header" class="container">
+				<h2>Fill the Form & Make a Booking</h2>
+			</div>
+			<div id="banner">
+				<img src="Baitap8.1.png" alt="">
+			</div>
+			<div id="main" class="container">
+				<form action="" id="form">
+					<div class="item">
+						<div>
+							<fieldset>
+								<legend>Your email address</legend>
+								<input type="text" class="infor" id="email">
+							</fieldset>
+						</div>
+						<div>
+							<fieldset>
+								<legend>Name</legend>
+								<input type="text" class="infor" id="name">
+							</fieldset>
+						</div>
+						<div>
+							<fieldset>
+								<legend>Telephone number</legend>
+								<input type="text" class="infor"  id="phone">
+							</fieldset>
+						</div>
+					</div>
+				<div class="item">
+					<fieldset>
+						<legend>Notes</legend>
+						<textarea id="notes" name="" rows="4" cols="21" value=""></textarea>
+					</fieldset>
+					<div class="guest">
+						<label for="">No of guests</label> <input id="amount" type="number">
+					</div>
+					
+				</div>
+				<br>
+					<input class="button" type="submit" value="RESERVE yourseat(s)" id="frm_submit">
+				</form>
+			</div>
+		</div>
+
+		
+		<div></div>
+	</div>
+		<div id="footer" class="container">
+			<label for="" id="error"></label>
+			<label for="" id="result"></label>
+		</div>
+	
+</body>
+</html>

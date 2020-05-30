@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#form').submit(function(){
+				var radius = $('#radius').val();
+				const pi = 3.14;
+				var error = "";
+				var result = "";
+
+				if(!radius){
+					error += "Không được để trống giá trị";
+				}
+				else if (isNaN(radius)){
+					error += "Giá trị nhập vào phải là số";
+				}
+				else {
+					var circum = parseInt(radius) * 2 * pi;
+					var area = radius * radius * pi;
+					result += "Chu vi = " + circum + "m <br>Diện tích = " + area + "m<sup>2</sup><br />";
+				}
+
+				$('#error').html(error);
+				$('#result').html(result);
+
+				event.preventDefault();
+
+
+
+
+			});
+			
+
+		})
+	</script>
+	<div class="container header"><h2>Chu vi và diện tích hình tròn</h2></div>
+	<div class="container">
+		<form action="" id="form">
+			<label for="" id="error"></label><br>
+			<label for="radius">Nhập bán kính (Đơn vị: met)</label><br>
+			<input type="text" class="numberinput" id="radius"><br>
+			<input type="submit" class="button green"><br>
+			<label for="" id="result"  class="blue_word" value="Tính chu vi và diện tích hình tròn"></label>
+		</form>
+		
+	</div>
+
+
+</body>
+</html>

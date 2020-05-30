@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+	<div class="container header">
+		<h2>Kiểm tra sự tồn tại của chuỗi</h2>
+	</div>
+	<div class="container">
+		<form action="" id="form">
+			<label for="string1">Nhập vào chuỗi ban đầu</label><br>
+			<input type="text" class="numberinput" id="string1"><br>
+			<label for="string2">Nhập vào chuỗi ban đầu</label><br>
+			<input type="text" class="numberinput" id="string2"><br>
+			<input type="submit" class="button blue" value="Kiểm tra" id="check"><br><br>
+			<label for="" class="green_word" id="result"></label><br>
+
+
+		</form>
+		
+		
+	</div>
+	<script>
+		 var form_obj = document.getElementById('form').addEventListener('submit', function(){
+			var string1 = document.getElementById('string1').value;
+			var string2 = document.getElementById('string2').value;
+			var result = "";
+			if (string1.includes(string2)){
+				result += "Chuỗi " + "<b>" + string2 + "</b>" + " tồn tại trong chuỗi ban đầu " + "<b>" +string1 +"</b>";
+			 }
+			else {
+				result += "Chuỗi " + "<b>" + string2 + "</b>" + " không tồn tại trong chuỗi ban đầu " + "<b>" +string1 +"</b>";
+			}
+
+			 document.getElementById('result').innerHTML = result;
+
+			 event.preventDefault();
+
+		 })
+	</script>
+</body>
+</html>

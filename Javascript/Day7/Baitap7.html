@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div class="container header">
+		<h2>Tìm Max - Min</h2>
+	</div>
+	<div class="container">
+		<form action="" id="form">
+			<label for="number1">Nhập vào số thứ nhất</label><br>
+			<input type="text" class="numberinput" id="number1"><br>
+			<label for="number2">Nhập vào số thứ nhất</label><br>
+			<input type="text" class="numberinput" id="number2"><br>
+			<label for="number3">Nhập vào số thứ nhất</label><br>
+			<input type="text" class="numberinput" id="number3"><br>
+			<input type="submit" value="Hiển thị max-min" class="button blue"><br><br>
+			<label for="" class="green_word" id="result"></label><br>
+		</form>
+		<script>
+			document.getElementById('form').addEventListener('submit', function(){
+				var number1 = parseInt(document.getElementById('number1').value);
+				var number2 = parseInt(document.getElementById('number2').value);
+				var number3 = parseInt(document.getElementById('number3').value);
+				var result = "";
+				var max,min;
+
+				// if (number1 > number2){
+				// 	if (number1 > number3){
+				// 		max = number1;
+				// 	}
+				// 	else {
+				// 		max = number3;
+				// 	}
+				// }
+				// else {
+				// 	if (number2 > number3){
+				// 		max = number2;
+				// 	}
+				// 	else {
+				// 		max = number3;
+				// 	}
+				// }
+
+				max = number1;
+				min = number1;
+
+				if (number2 > max){
+					max = number2;
+				}
+				if (number3 > max){
+					max = number3;
+				}
+
+				if (number2 < min){
+					min = number2;
+				}
+				if (number3 < min){
+					min = number3;
+				}
+
+				result += "Số lớn nhất <b>" + max+ "</b> <br>Số nhỏ nhất <b>" + min + "</b> <br>";
+
+				document.getElementById('result').innerHTML = result;
+
+				event.preventDefault();
+			});
+		</script>
+	</div>
+</body>
+</html>

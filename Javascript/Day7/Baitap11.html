@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 11 - Ngày 7</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div class="container header">
+		<h2>Tìm giai thừa</h2>
+	</div>
+	<div class="container">
+		<form action="" id="form">
+			<label for="factor">Nhập vào hệ số giai thừa</label><br>
+			<input type="text" class="numberinput" id="factor"><br>
+			<input type="submit" class="button blue" id="check"><br><br>
+			<label for="" id="result" class="green_word"></label><br>
+		</form>
+	</div>
+	<script>
+		
+		document.getElementById('form').addEventListener('submit', function(){
+			var factor = parseInt(document.getElementById('factor').value);
+			var a = 1;
+			var result = "<b>" +factor + "! = <b>" 	;
+
+			for (var i = 1; i <= factor; i++) {
+				a *= i;
+				if (i == factor){
+					result += i;
+				}
+				else {
+					result += i +" x ";
+				}			
+			}
+
+			result = result  + " = " + a;
+			document.getElementById('result').innerHTML = result;
+
+			event.preventDefault();
+
+		});
+	</script>
+</body>
+</html>

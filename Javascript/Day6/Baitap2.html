@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="form">
+		<h1>Form information</h1>
+		<table>
+			<tr>
+				<td><label for="name">Họ tên</label></td>
+				<td><input name="name" id="name" placeholder="Nhập tên của bạn" type="text" required></td>
+			</tr>
+			<tr>
+				<td><label for="age">Tuổi</label></td>
+				<td><input name="age" id="age" placeholder="Nhập tuổi của bạn" type="text" required></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Hiện thông tin">
+				</td>
+			</tr>
+		</table>
+	</form>
+	<label id="result"></label>
+	<script>
+			
+
+			var form_obj = document.getElementById('form');
+			form_obj.addEventListener('submit', function () {
+				var name = document.getElementById('name').value;
+				var age = document.getElementById('age').value;
+				var result = '';
+				result += "Họ tên: " + name + "\n" + "Tuổi: " + age + "\n";
+
+				alert(result);
+			});
+	</script>
+
+
+	<script src=""></script>
+</body>
+</html>

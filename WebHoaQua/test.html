@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.div1,.div2,.div3 {
+			border: 1px solid  black;
+			height: 50px;
+			width: 50px;
+			display: inline-block;
+			padding: 12px;
+		}
+
+		.div1 {
+			background: red;
+		}
+		.div2 {
+			background: yellow;
+		}
+		.div3 {
+			background: green;
+			float: right;;
+		}
+		
+		.container  {
+			width: 200px;
+			height: auto;
+			background: black;
+			overflow:auto;
+		}
+
+	
+	</style>
+
+	<script>
+		function check(){
+			var a;
+			a = document.getElementById("phone").value;
+
+			if (isNaN(a)){
+				document.getElementById("phoneresult1").innerHTML = "Phone number is invalid";
+			}
+			else {
+				document.getElementById("phoneresult1").innerHTML = "Phone number is valid";
+			}
+			
+			document.getElementById("phoneresult2").value = a;
+
+			
+		}
+
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="div1"></div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+	</div>
+
+	<input type="text" id="phone"><br>
+	<label id="phoneresult1" for=""></label><br>
+
+	<input type="button" onclick="check();"><br>
+	<input type="text" id="phoneresult2" id="phone"><br>
+
+	
+	<p>-----------------------------------------------------------------</p>
+
+
+	<h1>Bài tập 1</h1>
+	<script>
+	var number = prompt("Please enter any integer number");
+	var x = parseInt(number);
+	var result;
+
+	function factor(number){
+		if (number == 1){
+			return number;
+		}
+		else {
+			return number * factor(number-1);
+		}
+	}
+  	
+	result = factor(number);
+
+	var result2 = 1;
+
+	for (var i = 1; i <= x; i++){
+		result2 = result2 * i;
+	}
+
+
+	
+	document.write("<label>"+ "Cách 2: " + (result2) +"</label><br>");
+
+	
+
+	document.write("<label>"+ "Cách 1: " + (result) +"</label><br>");
+
+	
+
+	</script>
+
+	
+
+
+
+	<h1>Bài tập 2</h1>
+	<script>
+		var a = prompt("Please enter a");
+		var b = prompt("Please enter b");
+		var c = prompt("Please enter c");
+
+		var delta = (parseInt(b) * parseInt(b)) - 4 * (parseInt(a) * parseInt(c));
+
+		document.write("<label> Phương trình:" + a + "x^2 + " +b+"x +" + c +"x = 0 </label><br>");
+		var x1,x2;
+		if (delta > 0){
+			
+			x1 = ((-parseInt(b)) - Math.sqrt(delta)) / 2 * (parseInt(a));
+			x2 = ((-parseInt(b)) + Math.sqrt(delta)) / 2 * (parseInt(a));
+
+			document.write("<label> delta =" + delta + "</label><br>");
+			document.write("<label> Phương trình có 2 nghiệm: </label><br>");
+			document.write("<label>"+ "Nghiệm 1: " + (x1) +"</label><br>");
+			document.write("<label>"+ "Nghiệm 2: " + (x2) +"</label><br>");
+		}
+		else if (delta == 0) {
+		
+		x1 = (-parseInt(b)) / 2 * (parseInt(a));
+		x2 = x1;
+			
+			document.write("<label> delta =" + delta + "</label><br>");
+			document.write("<label> Phương trình có 2 nghiệm: </label><br>");
+			document.write("<label>"+ "Nghiệm 1: " + (x1) +"</label><br>");
+			document.write("<label>"+ "Nghiệm 2: " + (x2) +"</label><br>");
+		}
+		else {
+			document.write("<label> delta =" + delta + "</label><br>");
+			document.write("<label> Phương vô nghiệm: </label><br>");
+		}
+	</script>
+	
+
+</body>
+</html>

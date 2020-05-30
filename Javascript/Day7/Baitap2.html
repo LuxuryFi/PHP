@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 2 - Ngày 7</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<form action="" id="form">
+			<label for="numbera" >Nhập vào số a</label><br>
+			<input class="numberinput" id="numbera" type="text"><br>
+			<input type="submit" id="check" class="button blue" value="Kiểm tra"><br>
+		</form>
+		<label for="" id="result" class="blue_word"></label>
+	</div>
+	
+	<script>
+
+		var form_obj = document.getElementById('form').addEventListener('submit', function (){
+			var a = parseInt(document.getElementById('numbera').value);
+			var result = "";
+
+			if (a >= 1 && a <= 10 || a >= 50 && a <= 100){
+				result += a + " nằm trong khoảng 1-10 hoặc 50-100 <br>";
+			}
+
+			else {
+				result += a + " không nằm trong khoảng 1-10 hoặc 50-100 <br>"; 
+			}
+
+			document.getElementById('result').innerHTML = result;
+
+			event.preventDefault();
+
+		});
+		
+
+
+
+	</script>
+</body>
+</html>

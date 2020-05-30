@@ -1,0 +1,17 @@
+header {
+	border: 1px solid black;
+	color: white;
+	background-color: black;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	font-size: 50px;
+	padding-top: 90px;
+}
+
+body {
+	background-image: url("knnw2.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+
+}

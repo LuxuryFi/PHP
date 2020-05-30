@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 8 - Ngày 7</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div>
+		<ul id="nav">
+			<li class="option">Home</li>
+			<li class="option">About</li>
+			<li class="option">Products</li>
+			<li class="option">Services</li>
+			<li class="option">Contact</li>
+		</ul>
+
+		<script>
+			var nav = document.getElementById('nav');
+
+			nav.addEventListener('mouseover', function(event){
+				event.target.style.color = "orange";
+
+			});
+
+			nav.addEventListener('mouseout', function(event){
+				event.target.style.color = "white";
+			});
+
+
+		</script>
+	</div>
+</body>
+</html>

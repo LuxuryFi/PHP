@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="form">
+		Nhập tên: <input type="text" id="name" value="aa">
+	</form>
+
+
+	<script>
+		var name_obj = document.getElementById('name');
+		name_obj.addEventListener('input', function (){
+			var result = '';
+			result += name_obj.value;
+			alert("Chuỗi bạn đang nhập là " + result);
+		});
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="form">
+		<table>
+			<tr>
+				<td colspan="1">CoverImage: </td>
+				<td colspan="3"><input type="file" id="cover"></td>
+			</tr>
+			<tr>
+				<td>Title: </td>
+				<td><input type="text" id="title"></td>
+				<td>Author: </td>
+				<td><input type="text" id="author"></td>
+			</tr>
+			<tr>
+				<td>Release date: </td>
+				<td><input type="date" id="date"></td>
+				<td>Keywords: </td>
+				<td><input type="text" id="keywords"></td>
+			</tr>
+			<tr>
+				<td colspan="3"></td>
+				<td colspan="1"><input type="submit"></td>
+			</tr>
+		</table>
+		<label for="" id="result
+		"></label>
+		<script>
+			var obj_form = document.getElementById('form').addEventListener('submit', function (){
+				var result = '';
+				var obj_title = document.getElementById('title').value;
+				var obj_author = document.getElementById('author').value;
+				var obj_date = document.getElementById('date').value;
+				var obj_keywords = document.getElementById('keywords').value;
+
+				result += "Title: " + obj_title + "<br>" + "Author: " + obj_author + "<br>" + "Release Date: " + obj_date + "<br>" + "Keywords: " + obj_keywords + "<br>";
+				document.getElementById('result').innerHTML = result;
+				event.preventDefault();
+			})
+		</script>
+
+
+	</form>
+</body>
+</html>

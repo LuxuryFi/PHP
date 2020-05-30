@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 12 - Ngày 7</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+	<div class="container header">Hiển thị *</div>
+	<div class="container">
+		<form action="" id="form">
+			<label for="row">Nhập vào số hàng</label><br>
+			<input type="text" class="numberinput" id="row"><br>
+			<input type="submit" class="button blue" value="Hiển thị" id="check"><br><br>
+		</form>
+		<label for="" id="result" class="blue_word"></label>
+
+	</div>
+	<script>
+		document.getElementById('form').addEventListener('submit', function(){
+			var row = parseInt(document.getElementById('row').value);
+			var result = "";
+			for (var i = 1; i <= row; i++) {
+				var count = i;
+				for (var j = 0; j < count; j++) {
+					result += " * ";
+				}
+				result += "<br>";
+			}
+			document.getElementById('result').innerHTML = result;
+			event.preventDefault();
+		})
+	</script>
+</body>
+</html>

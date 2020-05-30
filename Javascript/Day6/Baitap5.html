@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red {
+			color: white;
+			background-color: red;
+			display: inline-block;
+			padding: 20px 40px;
+			margin: 10px;
+		}
+
+		#hover {
+			background: !white;
+		}
+
+	</style>
+</head>
+<body>
+	<ul id="hover">
+		<li id="1st" class="red">Menu 1</li>
+		<li id="2nd" class="red">Menu 1</li>
+		<li id="3rd" class="red">Menu 1</li>
+	</ul>
+
+
+		</script>
+	<script>
+		var result;
+		function myFunction(event){
+		 	return result = event.target.id;
+		}
+
+
+		var obj = document.getElementById('hover');
+
+		obj.addEventListener('mouseover', function (event){
+
+			event.target.style.background = "blue";
+			obj.style.background = "white";
+			event.target.style.transform = "scale(1.1)";
+		});
+		obj.addEventListener('mouseout', function (event){
+			event.target.style.background = "red";
+			
+			obj.style.background = "white";
+			event.target.style.transform = "scale(1.0)";
+		});
+
+		function change() {
+
+		}
+
+	</script>
+</body>
+</html>

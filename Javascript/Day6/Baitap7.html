@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="form">
+		Quốc gia 
+		<select name="" id="country">
+			 <option value="Việt Nam">Việt Nam</option>
+			 <option value="Nhật Bản">Nhật Bản</option>
+			 <option value="Hàn Quốc">Hàn Quốc</option>
+		</select>
+	</form>
+	<script>
+		
+
+		country.addEventListener('change', function (){
+			var country = document.getElementById('country').value;
+			
+			alert("Quốc gia bạn vừa chọn là " + country);
+		})
+	</script>
+
+</body>
+</html>

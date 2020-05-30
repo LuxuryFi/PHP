@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 4 - Ngày 7</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div class="container header">
+		<h2>Giải phương trình bậc nhất <br> ax + b = 0</h2>
+	</div>
+	<div class="container">
+		<form action="" id="form">
+
+			<label for="" id="error"></label><br>
+
+			<label for="numbera">Nhập vào hệ số a</label><br>
+			<input type="text" id="numbera" class="numberinput"><br>
+			<label for="numberb">Nhập vào hệ số b</label><br>
+			<input type="text" id="numberb" class="numberinput"><br>
+			<label for="numberc">Nhập vào hệ số b</label><br>
+			<input type="text" id="numberc" class="numberinput"><br>
+
+			<label for="">Phương trình của bạn có dạng</label><br>
+			<label for="" id="equation" class="blue_word"></label><br>
+			<input type="submit" id="check" class="button blue" value="Tìm x"><br>
+			<label for="" id="result" class="green_word"></label>
+		</form>
+		<script>
+
+			var form_obj = document.getElementById('form').addEventListener('submit', function (){
+				var a = document.getElementById('numbera').value;
+				var b = document.getElementById('numberb').value;
+				var c = document.getElementById('numberc').value;
+
+				var error = "";
+				var result = "";
+				var equation = "";
+				var x1, x2;
+
+				if (isNaN(a) || isNaN(b) || isNaN(c)){
+					error += "Giá trị nhập vào phải là số";
+
+				}
+				else if (!a || !b || !c) {
+					error += "Không được để trống giá trị nhập vào";
+				}
+				else {
+					a = parseInt(a);
+					b = parseInt(b);
+					c = parseInt(c);
+				}
+
+				var delta = (b*b) - (4*a*c);
+				equation += a + "x<sup>2</sup> + "  +b + "x + " + c + " = 0";
+
+				if (delta > 0){
+					x1 = (-b - Math.sqrt(delta)) / 2 * a;
+					x2 = (-b + Math.sqrt(delta)) / 2 * a;
+					var result = "x1 = " + x1 + "<br>" + "x2 = " + x2 + "<br>";
+				}
+				else if (delta == 0){
+					x1 = -b / (2* a);
+					x2 = x1;
+					var result = "x = " + x1 + "<br>";
+				}
+				else {
+					var result = "Phương trình vô nghiệm";
+				}
+				
+
+
+				if (!error) {
+					document.getElementById('error').innerHTML = error;
+					document.getElementById('result').innerHTML = result;
+					document.getElementById('equation').innerHTML = equation;
+				}
+
+				event.preventDefault();
+			});
+		</script>
+	</div>
+</body>
+</html>

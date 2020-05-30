@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 1 - Ngày 7</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+	<div class="container header">
+		<h1>Thực hành toán tử số học</h1>
+	</div>
+
+	<div class="container">
+		<label for="" id="error"></label>
+		<form action="" id="form">
+			<label for="numbera">Nhập vào số a</label><br>
+			<input class="numberinput" id="numbera" type="text"><br>
+			<label for="numberb">Nhập vào số b</label><br>
+			<input class="numberinput" id="numberb" type="text"><br>
+			<br>
+			<br>
+			<input class="button blue" id="a+b" value="a+b" type="submit">
+			<input class="button green" id="a-b" value="a-b" type="submit"> 
+			<input class="button red" id="a*b" value="a*b" type="submit"> 
+			<input class="button yellow" id="a/b" value="a/b" type="submit">
+			<input class="button blue" id="a%b" value="a%b" type="submit"> 
+			<input class="button green" id="a++" value="a++" type="submit">
+			<input class="button blue" id="++a" value="++a" type="submit"> 
+			<input class="button red" id="a--" value="a--" type="submit">
+			<input class="button yellow" id="--a" value="--a" type="submit"><br>	
+			<input class="button yellow" value ="Reset du lieu" type="reset">
+		</form>
+		<label for="" id="result"></label>
+	</div>
+	<script>
+
+		var form = document.getElementById('form').addEventListener('submit', function (event){
+
+			var id = document.activeElement.id;
+			var a = document.getElementById('numbera').value;
+			var b = document.getElementById('numberb').value;
+			var error = "";
+
+			if (isNaN(a) == true || isNaN(b) == true){
+				error += "Cần nhập dữ liệu là số <br>"; 
+			}
+			else if (!a  || !b ){
+				error += "Không được để trống dữ liệu";
+			}
+			else {
+
+				error = '';
+				a = parseInt(a);
+				b = parseInt(b);
+
+				
+
+
+
+			}
+
+			document.getElementById('error').innerHTML = error;
+
+
+			switch (id)
+			{
+				case "a+b": 
+					var result = a + b;
+					break;
+				case "a-b":
+					var result = a - b;
+					break;
+				case "a*b":
+					var result = a * b;
+					break;
+				case "a/b":
+					var result = a / b;
+					break;
+				case "a%b":
+					var result = a % b;
+					break;
+				case "a++":
+					var result = a++;
+					break;
+				case "++a":
+					var result = ++a;
+					break;	
+				case "a--":
+					var result = a--;
+					break;
+				case "--a":
+					var result = --a;
+					break;
+			}	
+			if (!error){
+				document.getElementById('result').innerHTML = result;
+			}
+			
+			event.preventDefault();
+	
+		});
+
+
+	</script>
+
+</body>
+</html>
