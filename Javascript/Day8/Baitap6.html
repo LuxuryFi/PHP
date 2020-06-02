@@ -8,15 +8,17 @@
 </head>
 <body>
 	<script>
+
 		$(document).ready(function(){
+			console.log(' Delete whitespace');
 			$('#form').submit(function(){
-				var name = $('#name').val();
-				var email = $('#email').val();
-				var phone = $('#phone').val();
-				var notes = $('#notes').val();
-				var amount = $('#amount').val();
-				var result = "";
-				var error = "";
+				var name 	= $('#name').val();
+				var email 	= $('#email').val();
+				var phone 	= $('#phone').val();
+				var notes 	= $('#notes').val();
+				var amount	= $('#amount').val();
+				var result 	= "";
+				var error 	= "";
 
 				console.log(name)
 				function validateEmail(email) {

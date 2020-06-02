@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			/*font-size: 1vw;*/
+		}
+		
+		/*@media screen and (min-width: 1000px) {
+			font-size: 30px;
+		}*/
+
+		.container {
+			width: 100%;
+		}
+
+		.header {
+			width: 100%;
+		}
+
+		.top-header {
+			background: #444444;
+			width: 100%;
+			
+		}
+		
+		.logo {
+		    padding: 15px 0px 30px 0px;
+		    color: #fff;
+		    font-weight: 800;
+		    font-size: 55px;
+		    width: 80%;
+		    margin: 0 auto;
+		}
+					
+		.nav {
+			background: #222222;
+			width: 100%;
+		}
+
+		.nav li {
+			display: inline-block;
+			padding: 10px 2%;
+		}
+
+		.nav li:first-child {
+			display: inline-block;
+			padding-left: 1%;
+		}
+
+		.menu {
+		    width: 80%;
+		    margin: 0px auto;
+		    color: #fff;
+		}
+
+		.row {
+			display: flex;
+			margin-bottom: 15px;
+
+		}
+
+		.main {
+		   width: 80%;
+		   margin: 15px auto;
+		}
+			
+		.main-top {
+		    background: #F4F4F4;
+		    padding: 20px 2%;
+		    margin-bottom: 25px;
+		    border: 2px solid #d2caca;
+		    width: 100%;
+		}
+	
+		.main-top p {
+			margin: 10px 0px;
+		}
+		
+		.main-col:nth-child(2) {
+			margin: 0px 25px 0px 25px;
+		}
+		
+
+		.main-center {
+			width: 100%;
+			margin: 0px 0px 25px 0px;
+		}
+
+		.main-center-left {
+		   width: 65%;
+		   margin-right: 2%;
+		   border-right: 2px solid #f4f4f4;
+		   margin-bottom: 25px;
+		   padding-right: 2%;
+		}
+
+		.content {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap-reverse;
+
+		}
+
+		.main-figure {
+			width: 30%;
+			padding: 0px 2% 20px 0px;
+			float: left;
+		}
+
+		.wrap {
+			width: 100%;
+			
+		}
+
+		.main-center-left img {
+			object-fit: contain;
+			  max-width: 100%;
+		}
+
+		
+		.main-center-right {
+		   width: 35%;
+		}
+
+		.col {
+			margin-right: 4%;
+			width: 50%;
+		}
+		
+		.article-right {
+		    background: #F4F4F4;
+		    padding: 20px 6%;
+		    border: 2px solid #d2caca;
+		    width: 100%;
+		    margin: 25px 0px;
+		}	
+
+		.footer {
+			width: 100%;
+			background: #EEEEEE;
+			padding: 20px 0px;
+		}
+		.footer-content {
+			width: 80%;
+			margin: 0px auto;
+			
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="top-header">
+				<div class="logo">
+					Project Name
+				</div>
+			</div>
+			<div class="nav">
+				<div class="menu">
+					<ul>
+						<li>Active</li>
+						<li>Link</li>
+						<li>Link</li>
+						<li>Link</li>
+						<li>Link</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-top">
+				<div class="row">
+					<div class="main-col">
+						<h4>Here's a box</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+						</p>
+						<div class="read-more">
+							<span>
+								->
+							</span>
+							<span>
+								Read More
+							</span>
+						</div>
+					</div>
+					<div class="main-col">
+						<h4>Here's a box</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+						</p>
+						<div class="read-more">
+							<span>
+								->
+							</span>
+							<span>
+								Read More
+							</span>
+						</div>
+					</div>
+					<div class="main-col">
+						<h4>Here's a box</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+						</p>
+						<div class="read-more">
+							<span>
+								->
+							</span>
+							<span>
+								Read More
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-center row">
+				<div class="main-center-left">
+					<div class="content">
+						
+						<div class="wrap">
+							<div class="main-figure">
+								<img src="images.jpg" alt="">
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							<h4>This is a nested column</h3><br>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+						<div class="col">
+							<h4>This is a nested column</h3><br>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="main-center-right">
+					<h2>A simple Sidebar</h2><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="article-right">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<h2>Incremental leading</h2><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-content">
+				Company 2012 - Layout based on YAMI
+			</div>
+		</div>
+	</div>
+</body>
+</html>
