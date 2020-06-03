@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Myriad Pro;
+}
+
+
+.container {
+	width: 100%;
+}
+
+.header {
+    background: #2f2f2f;
+    color: #fff;
+    padding: 10px 0px;
+    width: 100%;
+}	
+
+.header-content {
+    width: 80%;
+    margin: 0 auto;
+ 
+}
+
+.row {
+	display: flex;
+}
+
+.header-col {
+	width: 50%;
+}
+
+.menu li {
+	display: inline-block;
+	padding: 10px 3%;
+
+}
+
+
+
+.menu a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.ul {
+
+}
+
+
+@font-face {
+	/*Đường dẫn font*/
+	src: url('../fonts/Pacifico.ttf');
+	/*Tên font*/
+	font-family: 'Pacifico';
+
+}
+
+.logo {
+
+	font-size: 35px;
+	font-family: 'Pacifico';
+}
+
+.main-content {
+	width: 80%;
+	margin: 35px auto;
+
+}
+
+.main-top {
+	background: #f1f1f1;
+	padding: 25px 0;
+}
+
+
+
+.main-top-left {
+	width: 40%;
+	margin-right: 1%;
+}
+
+.main-top-right {
+	width: 60%;
+	text-align: right;
+}
+
+
+
+.learn-more {
+	margin-top: 25px;
+}
+
+.learn-more  a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 800;
+	padding: 10px 6%;
+	background: #f99640;
+	border-radius: 5px;
+}
+
+.main-center {
+    padding: 30px 0;
+}
+
+.main-figure {
+    height: 100px;
+    background: #000;
+}
+
+.main-center-item {
+	width: 33,33%;
+}
+
+.main-center-item:nth-child(2) {
+	margin: 0px 4%;
+}
