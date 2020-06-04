@@ -42,6 +42,7 @@
 	width: 100%;
 	background: #b1a38d;
 	overflow:auto;
+	overflow:hidden;
 }
 
 .main-content {

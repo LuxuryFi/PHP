@@ -149,13 +149,11 @@
 	font-size: 25px;
 }
 
-.bottom-logo {
-	
-}
 
-.bottom-logo div {
-	display: inline-block;
-	margin: 4px 2%;
+.bottom-logo {
+	display: flex;
+	/*margin: 4px 2%;*/
+	padding: 0px 4% 15px 4%;
 }
 
 .bottom-item {
@@ -163,9 +161,6 @@
 	margin: 20px 0px;
 }
 
-.logo-name {
-	
-}
 
 .date {
     padding: 4px 4%;
@@ -179,4 +174,9 @@
 
 .descript {
 	
+}
+
+.logo-name {
+	font-size: 1.5em;
+	margin: auto 5%;
 }
