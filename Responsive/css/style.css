@@ -1,0 +1,22 @@
+h1:after {
+	content: '';
+  	width: 20%;
+    border-top: 3px solid red;
+    display: block;
+    margin: 15px auto;
+ 
+}
+h1 {
+	text-align: center;
+}
+
+.login {
+	width: 50%;
+}
+
+.header {
+	
+	text-align: center;
+	padding: 20px 4%;
+}
+
