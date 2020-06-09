@@ -1,0 +1,17 @@
+li {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.active a {
+	color: red;
+}
+
+#error {
+	color: red;
+	margin-top: 20px;
+}

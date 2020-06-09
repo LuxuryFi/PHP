@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Đăng Ký Tài Khoản</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	
+	<script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			HEADER
+			<ul>
+				<li><a href="home.html">Trang chủ</a></li>
+				<li><a href="category.html">Danh mục</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li class="active"><a href="register.html">Đăng ký tài khoản</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<h1>Đây là trang đăng ký tài khoản</h1>
+			<h2>Form đăng ký tài khoản</h2>
+			<form action="" method="POST" id="form">
+				<table>
+					<tr>
+						<td>
+							<label for="name">Họ tên: *</label>
+						</td>
+						<td>
+							<input type="text" id="name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="age">Tuổi: *</label>
+						</td>
+						<td>
+							<input type="text" id="age">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="email">Địa chỉ email: *</label>
+						</td>
+						<td>
+							<input type="text" id="email">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="gender">Giới tính: *</label>
+						</td>
+						<td>
+							<input type="radio" name="gender" id="male" value="male"> Nam
+							<input type="radio" name="gender" id="female" value="female"> Nữ
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="email">Nghề nghiệp: *</label>
+						</td>
+						<td>
+							<input type="checkbox" id="dev" value="dev"> Dev
+							<input type="checkbox" id="tester" value="tester"> Tester
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="">Chọn khóa học: *</label>
+						</td>
+						<td>
+							<select name="" id="course">
+								<option value="none" selected>--Vui lòng chọn--</option>
+								<option value="php" >PHP</option>
+								<option value="javascript" >Javascript</option>
+								<option value="java" >Java</option>
+								<option value="c#" >C#</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="">Mật khẩu: *</label>
+						</td>
+						<td>
+							<input type="password" id="password">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="">Nhập lại mật khẩu: *</label>
+						</td>
+						<td>
+							<input type="password" id="password_2">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="note">Ghi chú  thêm</label>
+						</td>
+						<td>
+							<textarea name="" id="note" cols="25" rows="5">
+								
+							</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="Gửi thông tin">
+							<input type="reset" value="Xóa thông tin"> 
+						</td>
+					</tr>
+				</table>
+			</form>
+			<label for="" id="error"></label>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</div>
+</body>
+</html>

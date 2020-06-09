@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var regex = /abc/;
+		console.log(regex.test('abc abc abc'));
+		console.log(regex.test('bca'));
+
+		var regex1 = /^Nguyen/;
+		console.log(regex1.test('Nguyen Quoc Anh'));
+		console.log(regex1.test('Anh Quoc Nguyen'));
+
+		var regex2 = /Nguyen$/;
+		console.log(regex2.test('Anh Quoc Nguyen'));
+		console.log(regex2.test('Nguyen Quoc Anh'));
+		
+		var regex3 = /^Nguyen.*Anh$/;
+		console.log(regex3.test('Nguyen Quoc Anh'));
+		console.log(regex3.test('Nguyen Quoc Em'));
+		console.log(regex3.test('Nguien Quoc Anh'));
+		console.log(regex3.test('Nguyen em Anh'));
+
+	</script>
+</head>
+<body>
+	
+
+</body>
+</html>
