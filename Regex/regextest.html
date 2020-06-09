@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var regex1 = /abc/;
+		var arr = regex1.exec("Hello abc abc 123");
+		console.log(arr);
+
+		var regex_d = /\d/;
+		// \d = [0-9]
+		console.log(regex_d.test('abc'));
+		console.log(regex_d.test('abc123'));
+
+		// \D = [^0-9]
+		var regex_D = /\D/;
+		console.log(regex_D.test('123'));
+		console.log(regex_D.test('abc123'));
+
+		// \w - word chua ki tu chu hoac so
+		// \w = /[0-9][a-zA-Z]/
+		var regex_test = /[0-9a-zA-Z]/;
+		console.log(regex_test.test('B1aa2sd'));
+
+		var regex_W = /\W/;
+		console.log(regex_W.test('1#2'));
+
+		var regex_s = /\s/;
+		console.log(regex_s.test('ab css'));
+
+		var regex_email = /[0-9][a-zA-Z]/;
+		console.log(regex_email.test('aa123bA'));
+
+		var regex_name = /^Name.*anh$/;
+		console.log(regex_name.test('Name is anh'));
+
+		var regex7 = /manh|nvmanh/;
+		console.log(regex7.test('manh nvmanh'));
+		console.log(regex7.test('abx'));
+		console.log(regex7.test('manh2'));
+	</script>
+</body>
+</html>
