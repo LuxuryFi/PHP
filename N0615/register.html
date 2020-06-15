@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trang chủ</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script scr="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<img src="images/logo.png" alt="">
+			</div>
+			<div class="nav">
+				<ul>
+					<li >
+						<a href="index.html">Trang chủ</a>
+					</li>
+					<li class="active">
+						<a href="register.html">Đăng ký tài khoản</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-form">
+				<h1>Form đăng ký tài khoản</h1>
+				<br><br>
+				<form action="" method="post" id="form">
+					<table>
+						<tr>
+							<td>Họ tên <span>*</span></td>
+							<td><input type="text" id="name"></td>
+						</tr>
+						<tr>
+							<td>Tuổi <span>*</span></td>
+							<td><input type="text" id="age"></td>
+						</tr>
+						<tr>
+							<td>Địa chỉ email <span>*</span></td>
+							<td><input type="text" id="email"></td>
+						</tr>
+						<tr>
+							<td>Chọn khóa học <span>*</span></td>
+							<td>
+								<select name="" id="course">
+									<option value="none">Vui lòng chọn</option>
+									<option value="1">Lập trình PHP</option>
+									<option value="2">Lập trình Java</option>
+									<option value="3">Lập trình C</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Mật khẩu <span>*</span></td>
+							<td><input type="password" id="password"></td>
+						</tr>
+						<tr>
+							<td>Nhập lại mật khẩu <span>*</span></td>
+							<td><input type="password" id="confirm_password"></td>
+						</tr>
+						<tr>
+							<td>Ghi chú thêm</td>
+							<td>
+								<textarea name="" id="" cols="20" rows="5">
+
+								</textarea>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Gửi thông tin"></td>
+							<td><input type="reset" value="Xóa thông tin"></td>
+						</tr>
+					</table>
+					<label for="" id="error"></label>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Bản quyền thuộc về ITplus Academy</p>
+		</div>
+	</div>
+	<script>
+		var obj_form = document.getElementById('form');
+		obj_form.addEventListener('submit', function(){
+			var name_obj = document.getElementById('name');
+			var name = name_obj.value;
+			var age_obj = document.getElementById('age');
+			var age = age_obj.value;
+
+			var mail_obj = document.getElementById('email');
+			var mail = mail_obj.value;
+
+			var course_obj = document.getElementById('course');
+			var course = course_obj.value;
+
+			var password_obj = document.getElementById('password');
+			var password = password_obj.value;
+
+			var confirm_password_obj = document.getElementById('confirm_password');
+			var confirm_password = confirm_password_obj.value;
+
+			var error = '';
+			var regex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+
+			if (!name){
+				name_obj.focus();
+				error += 'Không được để trống tên';
+			}
+			else if (!age || isNaN(age)){
+				age_obj.focus();
+				error += 'Không được để trống số điện thoại hoặc số điện thoại phải là số';
+			}
+			else if (!mail || !regex.test(mail)){
+				mail_obj.focus();
+				error += 'Email không được để trống và phải nhập đúng định dạng';
+			}
+			else if (course == 'none'){
+				course_obj.focus();
+				error += 'Phải chọn khóa học';
+			}
+			else if (!password){
+				password_obj.focus();
+				error += 'Phải nhập password';
+			}
+			else if (confirm_password != password){
+				error += 'Password cần trùng khớp';
+			}
+			else {
+				alert('Đăng ký thành công');
+			}
+
+
+			document.getElementById('error').innerHTML= error;
+			event.preventDefault();
+		});
+	</script>
+</body>
+</html>

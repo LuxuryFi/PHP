@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 
 		if(!name){
-			$('#name').focus();
+			$('#name').focus();â 
 			error += 'Không để trống Name';
 		} 
 		else if (!age || isNaN(age)){
