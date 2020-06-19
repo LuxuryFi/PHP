@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a = 1;
+
+		function recursion(n){
+			if (n == 1){
+				return a;
+			}
+			else {
+				return a = n * recursion(n-1);
+			}
+		}
+
+		var b = recursion(5);
+		console.log(b);
+
+	</script>
+</body>
+</html>
